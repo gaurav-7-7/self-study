@@ -28,7 +28,7 @@ public class patterns {
                 + "Smallest element in provided array is: " + smallest(arr)[1]);
         System.out.println(mergeList(list1,list2));
         System.out.println(Arrays.toString(mergeArrays(arr1,4, arr2, 3)));
-        mergeWithSpace(a,b);
+        // mergeWithSpace(a,b);
     }
 
     public static int[] smallest(int[] arr) {
