@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width='device-width', initial-scale=1.0">
+        <title>Inline and Block</title>
+        <style>
+            #div2 {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            - block level elements gets the entire width of the parent in which it is present.
+            - headings, paragraph, lists all are block level elements. We can cross check with the developers tools.
+        -->
+        <h2>Heading</h2>
+        <div>
+            Div 1<br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus labore, saepe quis ipsam cupiditate minima! Alias consequuntur sed expedita veritatis officiis eum illum sequi, ipsam est eius consequatur maiores in.
+        </div>
+        <div id="div2">
+            Div 2<br />
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur eveniet mollitia atque. Temporibus amet aperiam mollitia sequi. Aliquid inventore non accusamus eum, blanditiis suscipit, voluptates mollitia doloribus eaque quia unde.
+        </div>
+
+        <!--
+            - spans are inline which means they get only the required amount of width page, nothing extra.
+            - images, anchor are some example of inline elements.
+        -->
+        <span>
+            span 1
+        </span>
+        <span>
+            span 2
+        </span>
+        <a href="#">This link</a>
+        <img src="https://freepngimg.com/thumb/cartoon/3-2-cartoon-free-png-image-thumb.png" alt="pikachu">
+
+        <!--
+            - using style we can change the width occupied by the block element which is something we cannot do for inline elements.
+            - even after specifying the width the block elements still occupy the entire width of the parent
+        -->
+    </body>
+</html>

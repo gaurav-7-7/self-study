@@ -1,0 +1,20 @@
+Data binding 
+- Its responsible for maintaining consistency betweeen the view and the component 
+- Used in web pages that contain interactive components
+
+- Interpolation binding only binds string values not boolean value to achieve this we use property binding
+
+One way binding
+- the html has two values dom property values and the actual attribute value and changing the value formt the view show change the value inside the logic (work with the actual attribute value)
+- For this we bind the data form the source -> target or target -> target
+- We can send data from our markup html to TS file or the other way around using data binding
+
+Two-way data binding
+- View will update the JS file and the JS file will update the mirroring value on the view and to achieve the same we use two-way data binding
+- Data flows from component to the view and back
+- ngModel is one such directive that we use to two way bind the value of the variable
+
+Attribute VS Property
+- Attribute is defined by the HTML whereas Properties are defined by the dom
+- Attribute intializes the DOM property and they are done and hence they cannot change once initialized 
+- Property values however can change

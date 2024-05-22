@@ -1,0 +1,19 @@
+Callback
+
+Promises
+- async operations are handled using callback, promises and async-await. 
+- using callback has its own disadvantages like trust issue(inversion of controll) and callback chaining.
+- using promises we assure trust to get our request fullfilled.
+- Promises are object initially but eventually it will be filled with the result of our async operation.
+- Unlike callback we don't pass function to another function but attach the callback function to a promise object which will eventually be filled with the resolve of the callback function.
+- Promise gives us that trust in our whole transaction because we can only have 3 states of a promise (resolve, reject, pending) and we can resolve a promise just once.
+- To handle callback chaining we use promise chaining instead to handle such cases where multiple async operations are nested inside one another.
+- we can attach multiple .then() functions as our callback handler.
+
+Async-await
+- Its a syntactic sugar that helps us write async handler with promise a bit more neatly and easy to read.
+- To preform asyncronous operatons using async-await we must define the function with async keyword as perfix.
+- This function eventually returns a promise with either of its state.
+- Instead of using a .then chain we simply await the result of the API/asyncronous-function and use it wherever we want. 
+- Using await keyword we wait on the result to get resolved by the API/request-function.
+- Handling error is much simpler than can just put the async part inside try-catch block instead of .catch() like in promises.

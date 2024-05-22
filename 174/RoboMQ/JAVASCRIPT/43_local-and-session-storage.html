@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Enter your fav color: <input type="text" name="color" id="fav-color" />
+        Enter your fav city: <input type="text" name="city" id="fav-city" />
+        Enter your fav hero: <input type="text" name="hero" id="fav-hero" />
+    </body>
+    <script>
+        document.getElementById('fav-color').addEventListener('input', function() {
+            // local storage stores the browser information in a key value pair in string only
+            // even after reopening the browser the local storage's key value pair still pertains
+            localStorage.setItem('Fav-Color', this.value); 
+            //changing the dom property based on the local storage's stored value
+            document.body.style.backgroundColor = this.value;
+        });
+        document.getElementById('fav-city').addEventListener("input", function() {
+            localStorage.setItem('Fav-City', this.value);
+        })
+
+        // to store an object we have to covert the object into a string using JSON.strigify() method as key value pairs can only be in string
+
+        // session storage keeps the stored values same as local storage but the time scope is as long as the browser is open, as soon as the browser/window closes all the session storage key-value pairs gets deleted
+        document.getElementById('fav-hero').addEventListener("input", function() {
+            sessionStorage.setItem('Fav-Hero', this.value);
+        })
+    </script>
+</html>

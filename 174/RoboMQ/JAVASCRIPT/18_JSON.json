@@ -1,0 +1,20 @@
+[
+    {
+        "name" : "gaurav",
+        "desc" : "student",
+        "ctc" : 120,
+        "major" : {
+            "min" : 2,
+            "max" : 5
+        }
+    },
+    {
+        "name" : "yukti",
+        "desc" : "student",
+        "ctc" : 280,
+        "major" : {
+            "min" : 2,
+            "max" : 5
+        }
+    }
+]

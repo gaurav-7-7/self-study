@@ -1,0 +1,19 @@
+Purpose of services
+- services are nothing but a class with specific Purpose
+- this purpose can be :
+    * sharing data between components
+    * implement application logic
+    * external interaction
+
+Dependency injection 
+- is a coding concept in which the class receives its dependencies from external source rather than creating them itself.
+- to use these dependencies we must register these service using injectors and declare as dependencies in the components.
+
+Observables
+- these are sequence of items that arrive asyncronously over time when we perform HTTP call
+- we must subscribe to these observable to obtain the value emitted by the observable
+- we unsubscribe from an observable to stop getting data from that stream of data
+
+Subject
+- subjects are special type of observable and are like event emitter used for cross component interaction.
+

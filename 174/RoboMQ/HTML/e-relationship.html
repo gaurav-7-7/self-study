@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        #list {
+            color: rgb(219, 193, 144);
+            font-style: italic;
+            font-weight: bold;
+        }
+        .para {
+            color: rgb(230, 177, 230);
+            font-style: italic;
+        }
+    </style>
+    <body>
+        <div>
+            <!--
+                - hierarchy for elements is just like tree
+                - example, div,anchor and a ul are inside the body so these are child to body and siblings among themselves
+                - inside div there are multiple elements inside the div, which are child to the div and siblings among themselves.
+                - body is ancestor to the elements present inside the div and is related through a ancestor-descendant relationship.
+            -->
+            <p class="para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur perferendis velit eligendi voluptates veniam sint nulla eius quis, earum, nostrum quisquam iste facere culpa eveniet vero optio unde, maxime iusto. <span>some span</span> <a href="http://twitter.com">Twitter</a>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, porro cum, atque quibusdam reprehenderit at.
+            </p>
+            <p class="para">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nobis vitae accusantium veniam possimus! Quos nam saepe fugit, aut, ullam laudantium recusandae ipsum sint dignissimos illo sed mollitia repudiandae quidem.
+            </p>
+        </div>
+
+        <a href="http://www.google.com">Google</a>
+
+        <ul id="list">
+            <li>apple</li>
+            <li>mango</li>
+            <li>banana</li>
+            <li>papaya</li>
+        </ul>
+    </body>
+</html>

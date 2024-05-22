@@ -1,0 +1,15 @@
+Value: {{ myVar | json }}
+<hr>
+
+<!-- two way data binding -->
+<!-- <input type="text" [value]="myVar" (input)="updateValue($event)"><br> -->
+<input type="text" [(ngModel)]="myVar" >
+
+<!-- property binding -->
+<img [src]="logo" alt="pikachu"><br>
+
+<!-- style binding, event bindind -->
+<h2 [style.color]="clr">Subscribe</h2>
+<button (click)="onClick()">Subscribe</button>
+<!-- to apply mutiple styles we use ngStyle directive and bind its value to the style object just created in the TS file. -->
+<h2 [ngStyle]="titleStyles">Subscribe</h2>

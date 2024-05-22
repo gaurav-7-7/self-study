@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>combinator</title>
+        <style>
+            /* descendant selector - where space acts as combinator between ancestor and descendant*/
+            div a{
+                /* will select all anchor tag that are within div*/
+                color: plum;
+            }
+
+            /* child selector - '>' is the parent-child combinator*/
+            p > a{
+                /* this will select only anchor tags which are children of paragraph*/
+                font-style: italic;
+                font-weight: bold;
+                color: powderblue;
+                font-size: 1.2em;
+            }
+
+            /* no space combinator*/
+            .x {
+                /*will select all the elment with class 'x'*/
+                background-color: rgba(245, 144, 56, 0.712);
+            }
+            p.x {
+                /*will select all the elment with class 'x' which are p*/
+                background-color: rgba(116, 245, 56, 0.712);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque nobis, id eveniet quam voluptate qui atque deleniti praesentium impedit veritatis et nostrum quae reiciendis! Maxime voluptatum aperiam libero alias.
+            <p class="x">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consequatur, quae culpa expedita recusandae 
+                <a href="#">GOOGLE</a>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consequatur, quae culpa expedita recusandae 
+                <a href="#">GOOGLE</a>
+            </p>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque nobis, id eveniet quam voluptate qui atque deleniti praesentium impedit veritatis et nostrum quae reiciendis! Maxime voluptatum aperiam libero alias.
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consequatur, quae culpa expedita recusandae 
+                <a href="#">GOOGLE</a>
+            </p>
+            <a href="#">GOOGLE</a>
+        </div>
+        <div class="x">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque nobis, id eveniet quam voluptate qui atque deleniti praesentium impedit veritatis et nostrum quae reiciendis! Maxime voluptatum aperiam libero alias.
+        </div>
+        <p class="x">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At aperiam facere earum numquam fugit pariatur <a href="#">GOOGLE</a>
+        </p>
+        <a href="#">GOOGLE</a>
+    </body>
+</html>

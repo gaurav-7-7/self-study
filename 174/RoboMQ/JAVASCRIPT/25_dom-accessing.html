@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quas quis quo quasi consectetur nulla saepe fugiat id exercitationem fugit ipsa nam animi, aut nesciunt quam tenetur assumenda minus odio!
+    </p>
+    <section class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo fuga nemo doloremque quam, nihil soluta labore exercitationem laborum, ut numquam modi saepe deleniti itaque ullam temporibus tenetur velit sunt ipsum.
+    </section>
+    <div class="content xyz">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolores, distinctio eos quae vel praesentium! Alias, beatae perspiciatis nihil earum sequi molestias! Quod quasi corrupti ad ratione veniam perspiciatis aliquam.
+    </div>
+    <script>
+        // we can easily get hold of the element by using Get element by ID/class/name which will simplify the node traversal in tree which was tiresome
+        var para = document.getElementById('para1') 
+        // getting the element in a variable
+        console.log(para) // will give out element with ID 'para1' 
+
+        var para2 = document.getElementsByClassName('content')
+        console.log(para2) // since there are more elements of the specified class the returned will be a collection of such nodes
+        console.log(para2[1]) // will give div dom node
+
+        var selectors = document.querySelector('.content') // will take css selectors as an input and return the first match element with the specified selector
+        console.log(selectors)
+        var selectorAll = document.querySelectorAll('.content') // this will return all the dom nodes with the specified selector
+        console.log(selectorAll)
+    </script>
+</body>
+</html>

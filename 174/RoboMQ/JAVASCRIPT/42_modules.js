@@ -1,0 +1,2 @@
+// a module is nothing but a javascript file and tells the runtime to make sure that whatever it wants to expose to the outer world it can expose and whatever it wants to keep private should stay private. 
+// so this file will decide what functions/classes/members will be public and available outside and what functions/classes/members will be private and available within the file only

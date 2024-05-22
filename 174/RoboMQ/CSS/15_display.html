@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                display: inline;
+                /* will override the user defined display type of div to inline*/
+            }
+            span{
+                display: block;
+                /* will convert inline to block which will take the entire widht of the page*/
+                padding: 10px;
+                /* since we have made span a block element top-border, top-margin, width etc will take affect on these*/
+            }
+            p{
+                display: inline-block;
+                /* will act as an inline element but we can setup restricted properties for inline element*/
+                padding: 10px 0px 10px 0px;
+                margin: 10px 0px 10px 0px;
+                width: 200px;
+            }
+            .hide-show{
+                display: block;
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid rgb(94, 255, 0);
+            }
+            #message{
+                display: none;
+                /* will hide the 2nd div, to show it on command we will use some javascript*/
+            }
+            #msg{
+                visibility: hidden;
+                /* will still reserve the spot for the element despite the visibility*/
+            }
+            #m{
+                opacity: 0;
+                /* another way to hide*/
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dignissimos omnis optio quia voluptate id. Natus quae animi est incidunt veritatis asperiores quasi, harum nesciunt velit modi quam culpa? Itaque!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis fugit nemo commodi omnis reiciendis ratione ab aperiam amet fuga architecto vitae dicta neque obcaecati explicabo, doloremque ut tempora repellat?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam obcaecati omnis reiciendis odit, ducimus reprehenderit.
+        </div>
+        <span>Hello world</span>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium enim rem repellendus autem alias aliquam delectus maiores voluptatem voluptate adipisci, voluptas minus odio eos hic placeat impedit. Ipsum, ea.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error culpa assumenda inventore sapiente explicabo nobis animi saepe eius expedita voluptatum ipsam, esse fugiat quae pariatur impedit illo rem, dicta nemo.</p>
+
+        <div class="hide-show" id="m">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dignissimos omnis optio quia voluptate id. Natus quae animi est incidunt veritatis asperiores quasi, harum nesciunt velit modi quam culpa? Itaque!
+        </div>
+        <div id="message" class="hide-show">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis fugit nemo commodi omnis reiciendis ratione ab aperiam amet fuga architecto vitae dicta neque obcaecati explicabo, doloremque ut tempora repellat?
+        </div>
+        <div class="hide-show" id="msg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam obcaecati omnis reiciendis odit, ducimus reprehenderit.
+        </div>
+        <script>
+            setTimeout(function(){
+                document.getElementById('message').style.display = 'block';
+            }, 5000);
+            // the function will run automatically after the specified time
+            setTimeout(function(){
+                document.getElementById('msg').style.visibility = 'visible';
+            }, 5000);
+            setTimeout(function(){
+                document.getElementById('m').style.opacity = '1';
+            }, 10000);
+        </script>
+    </body>
+</html>

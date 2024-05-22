@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                background-color: aquamarine;
+                width: 50%;
+                /* will take up half the width of the body*/
+                /* we can either give relative or absolute values*/
+                /* giving asolute unit will fix the content of the page regardless of the viewport size where as relative will change with the viewport size and assign the specified width to whichever size viewport its present in*/
+                height: 50%;
+                /* height by default takes up 100% of the content required but you can take control of the height using absolute units*/
+                max-width: 500px;
+                /* restrict width upto 500px, width cannot be more than 500px*/
+                padding: 20px 20px 20px 20px; 
+                /* its a shorthand property combining four properties padding-top, padding-right, padding-bottom, padding-left in same order.
+                We can control these individually also.
+                */
+                border: 4px solid rgb(228, 46, 82);
+                /* another shorthand property that sets border-width, border-type, border-color for all sides*/
+
+                margin: 20px;
+                /* another shorthand property that sets the margin between the block level elements*/
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            - box model is where the content(text, img, video, etc) is present and get the user defined styling(display type, height, width, padding margin, etc) by default and with css styling we can intend them to be according to our preference.
+        -->
+        <div id="div1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, non nulla. Accusantium voluptatibus laboriosam hic quisquam non, neque rem aspernatur placeat omnis possimus velit sed vel perspiciatis eos fuga necessitatibus?
+        </div id="div2">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, non nulla. Accusantium voluptatibus laboriosam hic quisquam non, neque rem aspernatur placeat omnis possimus velit sed vel perspiciatis eos fuga necessitatibus?
+        </div>
+    </body>
+</html>

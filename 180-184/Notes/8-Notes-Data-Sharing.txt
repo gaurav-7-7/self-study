@@ -1,0 +1,2 @@
+Data Sharing
+- using @Input decorator we send data from parent to the child component and using @Output decorator we send data from child to parent component

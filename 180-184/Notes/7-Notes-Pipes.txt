@@ -1,0 +1,17 @@
+Pipes
+- pipes are functions that formats the input and transforms it into desired output formats (eg: format a number to output the result upto two decimal places)
+- we can also do so using functions but using functions will be hard when we want to nest mutiple formater functions which is why its better to use pipes
+
+Built-in Pipes
+- DatePipes : Formats a date value according to locale rules.
+- UpperCasePipes : Transforms text to all upper case.
+- LowerCasePipes : Transforms text to all lower case.
+- CurrencyPipes : Transforms a number to a currency string, formatted according to locale rules.
+- DecimalPipes : Transforms a number into a string with a decimal point, formatted according to locale rules.
+- PercentPipes : Transforms a number to a percentage string, formatted according to locale rules.
+
+Custom Pipes
+- Using the cli we can create custom pipes ( ng generate pipe <pipeName>)
+- the above wil add our custom pipe to our app.module.ts
+- generating a pipe in such a way will create our file with some pre-written code with necessary imports and the most important part, transform function
+- whatever we return from this transform function would be the new value of the interpolation

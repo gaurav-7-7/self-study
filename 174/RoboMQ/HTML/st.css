@@ -1,0 +1,22 @@
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(219, 65, 65);
+}
+th, td {
+    border: 1px solid rgb(219, 65, 65);
+    padding: 10px;
+    color: aquamarine;
+    align-content: center;
+}
+.des {
+    color: rgb(233, 149, 233);
+    font-style: italic;
+}
+#ins{
+    width: 50%;
+    background-color: wheat;
+    color: rgb(236, 177, 110);
+}
+ul{
+    color: rgb(133, 245, 148);
+}

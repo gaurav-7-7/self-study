@@ -1,0 +1,38 @@
+What is Type Script?
+- open source lang built on JS with some added features
+- also called the supreset of javascript
+- regualar TS file compiles down like regular JS file
+- Can be used with front-end (Vanilla JS, React, Vue, comes built in with Angular) and back-end as well
+- includes most features from ES6, ES7
+
+Dynamic and Static typing
+- in dynamically types lang the types are associated with run-time values and not named explicitly in our code
+- in statically type lang you explicitly assign types to variables, function parameter, return values, etc
+- static example-(java, c++, Go), dynamic example-(JS, Python, PHP)
+
+Pro of TS
+- more robust
+- easy to spot a bug
+- predictability
+- readability
+- popular
+
+Cons of TS
+- More code to write
+- More to learn
+- Required Compilation
+- NOT truly staitcally typed
+
+Comiling TS
+- TS uses .ts and .tsx extensions
+- TSC (TypeScript Compiler) is used to compile .ts file down to JS
+- Since TS is compiled first we can easily watch and report errors at compile time
+- many tools include TS compilation as default and most IDE have great support for TS
+- tsconfig.josn file is used to configure how TS works
+
+File structure Setup
+- configuring our tsconfig file to compile the file to our dist directory.
+- seperating the production code from the source code. The production code is compiled to generate the src code and we configured our folder structure in such way to help developer distinguish between production code and compiler src code. 
+
+Interfaces
+- using interfaces we can map out how our classes/objects/fuctions will look like

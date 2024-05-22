@@ -1,0 +1,22 @@
+Directives
+- directives are classes that adds additional behavior to elements in our app
+- Built-in directives are use to manage forms, list, styles, etc. Basically what users sees in our app.
+- There are different types of directives
+  * components directives - directives with template
+  * attribute directives - change the appearance or behavior of an elements.
+  * structural directives - used to manipulate DOM layout by adding or removing DOM elements
+
+Structural Directives
+- These are responsible for changing the structure of the DOM. Adding or removing the elements from the DOM.
+- Structural directives always have (*) prefix whereas Attribute directives doesn't have any prefix as such
+- Most popular structural directives are: 
+    * NgIf - used to create or remove part of DOM tree depending on a condition ( there is another way to acheive this usign hidden property but in "hidden" case the element is not removed from the DOM rather its hidden in the DOM.)
+    * NgFor - used for displaying a list of items using repetitive loops
+    * NgSwitch - its just like switch case but used to display one element from among several possible elements, based on switch condition.
+
+Attribute Directives
+- responsible for manipulating the DOM by changing its behavior and appearance
+- generally used to apply conditional style to elements, show or hide elements or dynamically change behavior of component according to change property.
+- Most used attribute directives are:
+    * NgStyle
+    * NgClass

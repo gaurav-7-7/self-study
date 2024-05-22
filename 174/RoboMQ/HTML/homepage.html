@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IQ UNIVERSITY</title>
+        <style>
+            /* setting background image for the div*/
+            div.heading{
+                background-image: linear-gradient(rgb(238, 55, 55), rgb(89, 89, 233))
+            }
+            /* aligning the image*/
+            #h-img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+                border: 2px solid skyblue;
+                padding: 5px;
+            }
+            /* styling the description paragraph*/
+            .h-des {
+                text-align: center;
+                font-style: italic;
+                font-size: 1.1em;
+            }
+            /* styling the anchor having specific href attribute*/
+            a[href="know-more.html"] {
+                font-style: italic;
+                text-decoration: none;
+                color: rgb(0, 252, 227);
+            }
+            /* styling the horizontal line*/
+            hr.h-line{
+                border: 1px solid rgb(127, 207, 52);
+                border-radius: 5px;
+            }
+            /* styling the body elements*/
+            .div-body{
+                text-decoration: none;
+                color: wheat;
+            }
+            #b-img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+                padding: 3px;
+            }
+            .l1{
+                color: violet;
+                font-style: italic;
+            }
+            /* overall list style */
+            #nav-ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(70, 54, 54);
+            }
+            /* aligning the list items to the left */
+            #nav-li {
+                float: left;
+            }
+
+            /* styling the anchor tag within the list */
+            #nav-li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.3em;
+                font-family:'Courier New', Courier, monospace;
+            }
+
+            /* Changing the link color on hover */
+            li a:hover {
+                background-color: rgb(29, 28, 28);
+            }
+            .active {
+                background-color: #0483aa;
+            }
+
+            /* container size */
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* left panel resizing and alignment */
+            .l-panel {
+                width: 75%;
+                height: 100%;
+                float: left;
+                border-collapse: collapse;
+            }
+            /* right panel resizing and alignment */
+            .r-panel {
+                width: 25%;
+                height: 100%;
+                position: relative;
+                float: right;
+                background-color: rgb(40, 38, 41);
+                border-collapse: collapse;
+            }
+            /* panel-body padding */
+            .panel-body{
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+            /* right panel elements styling*/
+            .r-panel h3{
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #notif-list{
+                list-style: none;
+            }
+            #notif-list a{
+                list-style: none;
+                font-style: italic;
+                color: tomato;
+            }
+            #notif-list a:hover{
+                color: turquoise;
+                background-color: rgb(40, 38, 41);
+            }
+
+            /* left panel elements styling*/
+            .l-panel > h3{
+                text-align: center;
+                color: wheat;
+                font-size: 1.5em;
+                font-style: italic
+            }
+            /* image resizing and alignment*/
+            .b-img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                border: 1px solid rgba(135, 207, 235, 0);
+                padding: 2px;
+            }
+            /* adding backgroung color and changing font style*/
+            .l-panel > p{
+                font-family: sans-serif;
+                background-color: rgba(255, 255, 255, 0.74);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- heading div with image and some text-->
+        <div id="div-top" class="heading">
+            <img src="https://static.wixstatic.com/media/c921ad_40c8b9418afc49ab823d78517ac14167~mv2.png/v1/fill/w_428,h_128,al_c,q_85,usm_0.66_1.00_0.01/IQ%20Logo-Long%20White.webpg" alt="college-logo" id="h-img"><br />
+            <p class="heading h-des">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit est . <a href="know-more.html" target="_blank">Know more.</a>
+            </p>
+        </div><hr class="h-line"/>
+
+        <!-- div navbar-->
+        <div id="nav-bar" class="nav">
+            <ul id="nav-ul" class="navbar">
+                <li id="nav-li" class="navbar"><a href="#home">HOME</a></li>
+                <li id="nav-li" class="navbar"><a href="#login">LOGIN</a></li>
+                <li id="nav-li" class="navbar"><a href="#news">NEWS</a></li>
+                <li id="nav-li" class="navbar"><a href="#contact">CONTACTS</a></li>
+                <li id="nav-li" class="navbar" style="float:right"><a class="active" href="#about">ABOUT US</a></li>
+            </ul>
+        </div><hr class="h-line"/>
+
+        <!-- parent div container with multiple child div-->
+        <div class="container">
+            <div class="l-panel">
+                <h3 >Heading 1</h3>
+                <p class="panel-body" id="l-para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, repellendus alias vero nobis magni at expedita molestiae? Amet nobis voluptatibus explicabo voluptatem vel repellat iure, quibusdam nesciunt odio, similique id! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit repellendus vero voluptates ad temporibus sapiente, saepe similique eaque enim dolorum earum debitis a doloremque quod modi neque obcaecati nesciunt harum.
+                </p>
+                <img src="https://fremont.edu/wp-content/uploads/2013/02/Effective-Study-Habits.jpg" alt="img1" class="b-img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae et placeat repellat, optio quod quidem. A mollitia, quae veniam in accusamus, doloremque quibusdam quam voluptatibus dolore architecto cumque. Exercitationem, illum.</p>
+            </div>
+            <div class="r-panel">
+              <h3 class="panel-body">Notifications</h3>
+              <ul class="panel-body" id="notif-list">
+                <li><a href="#">Consectetur adipisicing elit.</a></li><br>
+                <li><a href="#">Consectetur adipisicing elit.</a></li><br>
+                <li><a href="#">Consectetur adipisicing elit.</a></li><br>
+              </ul>
+            </div>
+          </div>
+    </body>
+</html>

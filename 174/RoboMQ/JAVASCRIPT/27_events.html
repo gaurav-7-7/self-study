@@ -1,0 +1,59 @@
+<!-- 
+    any dynamic changes to the webpage is event (eg; user clicks on a button and it triggers something)
+-->
+<!--
+    Some majorly used events
+ - load event(window, images, script)
+ - click (button, div, p)
+ - keyup (input) (focus, blur)
+ - mouseover (any element)
+ - submit (form)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="para1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut fugiat dignissimos beatae laudantium accusamus. Quasi ipsum illo delectus aut beatae, harum eaque adipisci voluptatem ad amet, distinctio omnis cupiditate voluptate?
+        </p>
+        <button onclick="clickMe()">Click ME</button>
+        <button onmouseover="mouseOver()">Hover ME</button>
+        <button id="bNode">Node button</button>
+        <button id="bContext">Click context</button>
+        <script>
+            // this will run the function on page load
+            window.onload = function(){
+                alert("Page load event")
+            }
+            function clickMe(){
+                alert("Button click event")
+            }
+            function mouseOver(){
+                alert("Mouse over event")
+            }
+
+            // more preffered way as html and javascript part dont get mixed up
+            document.getElementById('bNode').onclick = function(){
+                alert("Onclick using the dom node accessing method")
+            };
+            // event listener take two parameters first is the name of the event and 2nd the function that it should perform and this is the preffered way to go around this
+            // also using eventlisterner we can add multiple function to an element and all the specified will be showed as an event whereas if we did the same with normal function with same functionality the most recent one would overwrite all the previous one and only the most recent event function will be carried out
+            document.getElementById('para1').addEventListener('mouseover',function(){
+                alert('Mouse over para1')
+            })
+            document.getElementById('para1').addEventListener('mouseover',function(){
+                alert('Mouse over para2')
+            })
+            document.getElementById('bContext').addEventListener('click',function(){
+                console.log(this); // context of the event handler
+            })
+        </script>
+    </body>
+</html>
+

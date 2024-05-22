@@ -1,0 +1,13 @@
+- SQl
+    - Datatypes:
+        Numeric : ["TINYINT", "SMALLINT", "MEDIUMINT", "INT", "INTEGER", "BIGINT", "FLOAT", "DOUBLE", "DOUBLE PRECISION", "REAL", "DECIMAL(p, s)", "NUMERIC(p, s)"]
+
+        Date/Time : ["DATE", "DATETIME", "TIMESTAMP", "TIME", "YEAR"]
+
+        Character/string : ["CHAR(n)", "VARCHAR(n)", "TINYTEXT", "TEXT", "MEDIUMTEXT", "LONGTEXT"]
+        
+        Unicode Character : ["NCHAR(n)", "NVARCHAR(n)", "NTINYTEXT", "TEXT", "MEDIUMTEXT", "LONGTEXT"]
+
+        Binary : ["BINARY(n)", "VARBINARY(n)", "TINYBLOB", "BLOB", "MEDIUMBLOB", "LONGBLOB"]
+
+        Miscelleneous : ["XML" , "JSON"]

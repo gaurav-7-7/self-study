@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="name here" required><br>
+            <!-- 
+                - value attribute gives initial/default value to the element
+                - required attribute validates the field for non empty value and ask the user to provide for an input
+            -->
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br>
+            <!-- email is validated for valid email address by the HTML5, earlier versions of HTML did not provide this validation, developers had to do it manually.-->
+
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date"><br>
+
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search"><br> 
+
+            <label for="address">Adress</label>
+            <textarea name="address" id="address" cols="20" rows="4"></textarea><br>
+
+            <label for="city">City</label>
+            <select name="city" id="city" required>
+                <option value="RNC" selected>Ranchi</option>
+                <option value="BKR">Bokaro</option>
+                <option value="DNB">Dhanbad</option>
+                <option value="JMS">Jamshedpur</option>
+            </select><br />
+            <!--
+                - dropdowm menu enables us to give certain input to select from the drop dowm menu.
+                - 'selected' attribute gives a default selection value from the options
+                - instead of the the display text the value is sent of the option tag.
+            -->
+
+            <label for="subjects">Subjects</label>
+            <div id="sub">
+                <label>
+                    <input type="checkbox" name="subjects" value="chemistry">Chemistry
+                </label>
+                <label>
+                    <input type="checkbox" name="subjects" value="physics">Physics
+                </label>
+                <label>
+                    <input type="checkbox" name="subjects" value="maths">Maths
+                </label>
+            </div>
+            <!--
+                - we use check boxes when we want the user to input multiple options.
+                - similar to this we have radio buttons but only one selection is allowed.
+            -->
+            <label for="interests">Interests</label>
+            <div id="sub">
+                <label>
+                    <input type="radio" name="interests" value="sports">Sports
+                </label>
+                <label>
+                    <input type="radio" name="interests" value="arts">Arts
+                </label>
+                <label>
+                    <input type="radio" name="interests" value="chess">Chess
+                </label>
+            </div>
+            <button>Submit</button><br /><br />
+            <!--
+
+            -->
+            <input type="button" value="Button 2">
+            <button>Button 1</button>
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>

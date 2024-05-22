@@ -1,0 +1,12 @@
+- React uses JSX(Javascript xml) syntax.
+- Using CDN we can pull out to run react code into out index.html
+- What are CDN?
+- CDN are content delivery network, through this we inject react internal functionality into out project.
+
+- 'createElement' method of react takes up 3 argument and gives out a react object.
+- Three arguments are:-
+    a) html tag
+    b) props (property)
+    c) inner content
+- ReactDOM's 'render' method will take the element created from the above method and renders it out to make a HTML element which we then see on the screen.
+

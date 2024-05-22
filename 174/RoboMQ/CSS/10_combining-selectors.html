@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div ul li{
+                color: orange;
+            }
+            div ol li{
+                font-style: italic;
+            }
+            /* below will select pseudo hover class with class 'list' and are li within ul insisde div*/
+            div ul > li.list:hover{
+                cursor: pointer;
+                color: aqua;
+                background-color: antiquewhite
+            }
+            /* even if the below style overwrites the above selection, it will not get applied instead the above selection will get applied because its more specific pair of combinators*/
+            ul > li.list:hover{
+                cursor: pointer;
+                color: rgb(0, 255, 85);
+                background-color: antiquewhite
+            }
+            div > p{
+                background-color: rgba(67, 233, 177, .55);
+                /* the last parameter of the rgb is opacity value ranged from 0-1, 0 being the tranparent and 1 being opaque which sets the color opacity*/
+                padding: 20px;
+            }
+            div > #p2{
+                position: relative;
+                top: -50px;
+                background-color: rgb(147, 59, 230, .55);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi harum laborum quibusdam voluptas accusamus hic perferendis odit consequatur ipsam sint et corrupti eum dolorum officiis assumenda, quo perspiciatis sapiente possimus!
+            </p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.Modi harum laborum quibusdam voluptas accusamus.</p>
+            <ul>
+                <li class="list">One</li>
+                <li>Two</li>
+                <li class="list">Threes <span>3rd list item</span></li>
+                <li>Four</li>
+            </ul>
+
+            <ol>
+                <li>Gaurav</li>
+                <li>Harsh</li>
+                <li>Sachin</li>
+                <li>Rohit</li>
+            </ol>
+        </div>
+        <ul>
+            <li>Gaurav</li>
+            <li class="list">Harsh</li>
+            <li>Sachin</li>
+            <li>Rohit</li>
+        </ul>
+    </body>
+</html>

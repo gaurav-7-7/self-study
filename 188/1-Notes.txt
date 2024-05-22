@@ -1,0 +1,22 @@
+    Without docker ?
+- we have multiple OS available to us and keeping our application stack compatible with the OS we plan to use is a challange.
+- compatibility of the services with the libraries and dependencies supported by the OS
+- also as our application's version change we update the versions of the tech stack libraries and dependencies which asks us to again check for that version's compatibility.
+
+    What can docker do to help?
+- with docker we can run each component of the tech stack into a seperate container with its own dependencies and libraries required to run it.
+- it continerize the application and enables us to run each services with its dependencies in seperate containers using a config file.
+
+    What are conatiners ?
+- conatiners are completly isolated env with thier own processes, network and mounts but they all same the same kernel 
+- Docker offer a high level tools that makes us use conatiner with ease.
+
+    Difference between docker image and container
+- an image is a package/template which is used to build conatianer while containers are running instance of image
+
+Application file along with the docker config file is used to create image for the application which can run on any host with docker installed on it and is guaranteed to run the same way everywhere.
+
+
+docker run redis:4.0  - tag (pulling a specific version of image and runs that, if not specified it will pull the latest version image)
+
+

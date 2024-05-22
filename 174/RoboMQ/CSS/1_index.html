@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* selecting using the selector which targets the tag specified*/
+            p {
+                color: rgb(235, 98, 74);
+                font-style: italic;
+            }
+            /* selecting using element id*/
+            #p3 {
+                color: rgb(235, 219, 74);
+            }
+            /* selecting using class*/
+            .list {
+                color: rgb(166, 196, 235);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First html page with css</h1>
+        <!--
+            - css helps us to add styles to the html structure making it more dynamic and appealing.
+            - there are three ways to add css to a webpage
+        -->
+
+        <!-- 
+            - inline way to add css by including the style attribute inside the opening tag
+            - the style atribute takes property-value as an input, each property take care of different requirements
+            - inline css has its limitation when we want to add/change css to multiple elements at once.
+        -->
+        <div>
+            <p style="color: rgb(111, 230, 218); text-decoration: underline;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto qui perspiciatis distinctio tempora sequi quaerat laborum similique numquam officiis ab aut, dignissimos cum eligendi magnam facere dolor eaque quisquam quo!
+            </p>
+
+            <!--
+                - another way to add css is to use internal styling/embedded style where we define a style in the head part of the document.
+                - with this we can add/change css to multiple elements at one go without needing to change at numerous positions.
+            -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus quo ipsa illum eum inventore vero, mollitia animi necessitatibus cumque, aliquid ex ad, officiis doloremque quibusdam laborum! Sit earum architecto cumque.
+            </p>
+            <p id="p3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint unde ad magni dolorum placeat? Sed, saepe labore non aperiam fugit ab consectetur incidunt similique? Suscipit iure nostrum vel enim sint.
+            </p>
+        </div>  
+
+        <div class="list">
+            <a href="link.html">This is a link</a><br />
+            <ul class="list">
+                <li>saepe labore</li>
+                <li>non aperiam</li>
+                <li>Suscipit iure</li>
+                <li>sit amet</li>
+            </ul>
+            <ol class="list">
+                <li>saepe labore</li>
+                <li>non aperiam</li>
+                <li>Suscipit iure</li>
+                <li>sit amet</li>
+            </ol>
+        </div>
+
+        <!--
+            - when we want to style to be uniform accross multiple pages without making the repeating changes to each page we make use of external css. 
+        -->
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">SAEPE IURE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Suscipit iure</td>
+                        <td>sit amet</td>
+                    </tr>
+                    <tr>
+                        <td>Suscipit iure</td>
+                        <td>sit amet</td>
+                    </tr>
+                    <tr>
+                        <td>Suscipit iure</td>
+                        <td>sit amet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

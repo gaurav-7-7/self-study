@@ -1,0 +1,39 @@
+<form [formGroup]="myForm">
+  Value: {{ myForm.value | json }}
+  <hr>
+  <mat-form-field>
+    <input matInput placeholder="email" formControlName="email">
+  </mat-form-field>
+
+  <h4>Cell Phone</h4>
+
+  <div formGroupName="cellPhone">
+    <mat-form-field>
+      <input matInput formControlName="area" placeholder="area">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="prefix" placeholder="prefix">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="line" placeholder="line">
+    </mat-form-field>
+  </div>
+
+  <h4>Home Phone</h4>
+
+  <div formGroupName="homePhone">
+    <mat-form-field>
+      <input matInput formControlName="area" placeholder="area">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="prefix" placeholder="prefix">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="line" placeholder="line">
+    </mat-form-field>
+  </div>
+</form>

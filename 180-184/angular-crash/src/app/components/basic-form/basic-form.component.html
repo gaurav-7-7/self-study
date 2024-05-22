@@ -1,0 +1,31 @@
+<form [formGroup]="myForm">
+  <!-- getting the value form the form -->
+  Value: {{ myForm.value |  json }}
+
+  <hr>
+
+  <!-- material form field -->
+  <mat-form-field>
+    <input matInput placeholder="Email" formControlName="email">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea matInput placeholder="Your message..." formControlName="message"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select formControlName = "career">
+      <mat-option value="xyz">xyz</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <div *ngFor="let n of college">
+    <mat-checkbox
+      [checked]="n.selected"
+      (change)="onChangeCollege($event)"
+    >{{ n.name }}</mat-checkbox>
+  </div>
+
+  <input type="checkbox" formControlName="message2" value="message2">
+  <label for="msg" >message</label>
+</form>

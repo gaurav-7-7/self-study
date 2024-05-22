@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cascade</title>
+        <style>
+            p {
+                background-color: rgb(42, 39, 85);
+                color: lightgreen;
+            }
+            p {
+                color: lightsalmon;
+            }
+            /* since there are two styles for the same tag the bottom one will be applied to the paragraph because the browser read the instruction from top to bottom and applies the latest style*/
+            p{
+                font-style: italic;
+                color: lightgreen;
+            }
+            /* same for the case of two style tags/sheets, the bottom most recent one will be applied*/
+        </style>
+        <link rel="stylesheet" href="9_cascade.css">
+        <!-- the link css file's style will be applied as its the most recent instruction in the order. If it had been above the embedded style sheet then embedded style sheet's style would have been applied-->
+    </head>
+    <body>
+        <!-- inline style comes latest in the order which is why their style would get applied also inline style have the highest priority.-->
+        <p style="color: rgb(255, 251, 0);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum doloremque reprehenderit, mollitia impedit neque in est voluptatibus rerum maiores dignissimos facilis nemo eos velit fugit aut ad voluptate laudantium.
+        </p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </body>
+</html>

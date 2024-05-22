@@ -1,0 +1,5 @@
+What is linux?
+- Its both a kernel and a operating system like other OS, but faster
+
+File System
+- everything in linux is files (commands as well)

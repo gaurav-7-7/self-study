@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pseudo_class-selectors</title>
+        <style>
+            p::first-letter {
+                /* select first letter of every 'p' element*/
+                font-size: 1.5em;
+                color: rgb(243, 51, 147);
+            }
+            :first-line{
+                /* 
+                    - select first line of every element.
+                    - its like a class automatically
+                    created for you and is selected using the shown syntax for applying style.
+                    - '*' is the universal selector which select each and every element.
+                */
+                color: greenyellow;
+            }
+            /* unvisited link pseudo class*/
+            a:link{
+                background-color: rgb(38, 77, 90);
+            }
+            /* visited link pseudo class changes the link style of visited sites/links*/
+            a:visited{
+                background-color: rgb(62, 163, 62);
+            }
+            a:hover {
+                /* applies style when we hover mouse over the specified element*/
+                background-color: rgba(255, 100, 80, 0.829);
+                cursor: pointer;
+            }
+            a:active{
+                /* applies style when we mouse click and don't release over the element*/
+                background-color: purple;
+            }/* this is the preferred pseudo class order to follow to avoid ambiguity while applying style*/
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">Heading</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio impedit doloremque laborum quia quam ducimus delectus recusandae, omnis officiis accusamus 
+            <a href="http://google.com">Google search page</a><br>
+            <a href="http://twitter.com" target="_blank">Twitter login page</a>
+            iste ipsum porro earum adipisci ipsam, atque, praesentium rerum exercitationem?
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam similique eligendi et nobis aspernatur neque dolore maxime ex voluptas, facere, ut iure eum animi velit! Expedita quam quas id tenetur!
+        </p>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, 
+            <span>Span 1</span><br />
+            <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+            <span>Span 2</span>
+            omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nam quisquam nihil. Nisi consectetur at asperiores deleniti rem officiis officia odio, enim pariatur et, distinctio accusantium, laborum ipsum aperiam corrupti?
+        </p>
+        <a href="http://google.com">Google search page</a><br>
+        <a href="http://twitter.com" target="_blank">Twitter login page</a>
+        <span>Span 1</span><br />
+        <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+        <span>Span 2</span>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+What is angular?
+- angular is an application design framework and development platform for creating efficient and sophisticated single-page apps
+- SPA developed by this framework runs on client-side, but we can also create full stack applications by making HTTP request to the server
+- angular can also run on server side with something like angular universal
+
+Why use angular?
+- create dynamic frontend apps and universal
+- its full featured framework (router, http, etc)
+- integrated typescript
+- uses RxJS library which allows us to use observables that allows us to write efficient asyncronous programming
+- popular in large enterprise
+
+Angular components
+- uses UI components that include the template(HTML), logic and styling
+- these components are reusable and can be embedded into the template as an XML (like a tag)
+- components are class based as well
+
+Angular Services
+- angular distinguishes components from services to increase modularity and reusability
+- this cleans up our components and makes it clean rather than putting all the functionality into components
+- services are classes built to handle one task/aspect of the application (data fetching, input validation, implement logic, external interaction)
+

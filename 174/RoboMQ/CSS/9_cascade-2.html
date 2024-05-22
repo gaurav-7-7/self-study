@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cascade advanced</title>
+        <style>
+            p {
+                color: mediumturquoise;
+            }
+            /* class selectors are given more importance than the type selector because usually in a page the number of particular elements are much higher than no.of elements of a given class which class selector are more specific than the type selector*/
+            .des{
+                color: rgb(209, 27, 27);
+            }
+            /* same logic is for id selector, id selector are more specific than class selector*/
+            #para1{
+                color: rgb(177, 218, 95);
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para1" class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum doloremque reprehenderit, mollitia impedit neque in est voluptatibus rerum maiores dignissimos facilis nemo eos velit fugit aut ad voluptate laudantium.
+        </p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+    </body>
+</html>

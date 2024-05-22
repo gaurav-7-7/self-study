@@ -1,0 +1,28 @@
+<!--
+    - when we click on a button the browser creates an object for that event with all the details about the event
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="b1">CLick me to show the details about me in the console window</button>
+        <a href="https://www.youtube.com/">Not YouTube</a>
+        <script>
+            document.getElementById('b1').addEventListener('click',function(e){
+                console.log(e); // will show the context of the event handler in the console
+            })
+            // browsers have some default action assoiciated as well that it performs by default (eg; anchor tag will redirect to another page by changing the url). We would sometime want to prevent these action and to do so using eventDefault method
+            document.querySelector('a').addEventListener('click',function(e){
+                if( !confirm('Are you sure you want to leave this page!'))
+                    // when the above statement becomes true that is if we select YES the it nullifies the below prevention method and will take you to the url
+                    e.preventDefault();
+                alert('Didn\'t take you to youtube! very strange')
+            });
+        </script>
+    </body>
+</html>

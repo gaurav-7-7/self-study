@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .big {
+                font-size: 2em;
+                font-weight: bold;
+            }
+            .red{
+                color: rgb(218, 50, 50);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" alt="baby-yoda" height="200px" width="200px">
+        <button onclick="changeImg2()">Change</button>
+        <p id="para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores optio fuga reprehenderit quibusdam saepe dolorem vitae incidunt. Dolor in dignissimos corrupti quam repellat natus minima consequatur obcaecati quisquam magni. Eius.
+        </p>
+        <p id="para2" class="red">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores optio fuga reprehenderit quibusdam saepe dolorem vitae incidunt. Dolor in dignissimos corrupti quam repellat natus minima consequatur obcaecati quisquam magni. Eius.
+        </p>
+        <p id="para3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores optio fuga reprehenderit quibusdam saepe dolorem vitae incidunt. Dolor in dignissimos corrupti quam repellat natus minima consequatur obcaecati quisquam magni. Eius.
+        </p>
+        <a href="https://www.google.com/">Link to google</a>
+        <button onclick="changeLink()">Change</button>
+        <!--
+            we add it at the end of the page because when the page loads javascript might block the rendering of the page
+        -->
+        <script>
+            // using the accessing methods we will manipulate the elements of the page
+            // setTimeout(function(){ // delay the execution for the specified amount of time which in our case is 4 sec
+
+            //     document.getElementById('para').innerHTML = '<span> Span 1</span><hr /><span> Span 2</span>' // will change the element content to newer one using the para id
+
+            //     document.getElementById('para2').innerText = '<span> Span 1</span><hr /><span> Span 2</span>' // this will not get interpreted as html tags rather it will just be taken as text
+
+            //     document.getElementById('para3').style.fontStyle = 'italic'; //changing the style
+
+            //     document.getElementById('para3').classList.add('big'); //adding class to the paragragh which has some css associated with it
+
+            //     document.getElementById('para2').classList.remove('red'); //removing class from the paragragh which has some css associated with it
+
+            // }, 4000); 
+
+
+            // manipulating the attribute
+            function changeImg(){
+                document.querySelector('img').src = 'https://pbs.twimg.com/media/ENTmI5aWkAALgiU.png';
+            }
+
+            // another way
+            function changeImg2(){
+                document.querySelector('img').setAttribute('src','https://pbs.twimg.com/media/ENTmI5aWkAALgiU.png');
+            }
+            function changeLink(){
+                document.querySelector('a').removeAttribute('href'); // will remove href attribute from the anchor tag
+            }
+            
+        </script>
+    </body>
+</html>

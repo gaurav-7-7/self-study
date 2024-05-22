@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>basic-selectors</title>
+        <style>
+            /* type selector*/
+            p {
+                color: crimson;
+            }
+            /* class selector*/
+            .div {
+                color: olive;
+            }
+            /* id selector*/
+            #h1 {
+                color: goldenrod;
+            }
+            /* attribute selector*/
+            [href] {
+                color: greenyellow;
+            }
+            /* combination attribute and type selector*/
+            a[href] {
+                font-style: italic;
+                text-decoration: none;
+                /* this will select anchor tag having href attribute*/
+            }
+            /* attribute value match selector*/
+            a[href="http://yahoo.com"]{
+                font-size: 1.2em;
+                /* this will select anchor tag having href attribute with value specified*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">Heading</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio impedit doloremque laborum quia quam ducimus delectus recusandae, omnis officiis accusamus iste ipsum porro earum adipisci ipsam, atque, praesentium rerum exercitationem?
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam similique eligendi et nobis aspernatur neque dolore maxime ex voluptas, facere, ut iure eum animi velit! Expedita quam quas id tenetur!
+        </p>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nam quisquam nihil. Nisi consectetur at asperiores deleniti rem officiis officia odio, enim pariatur et, distinctio accusantium, laborum ipsum aperiam corrupti?
+        </p>
+        <a href="http://google.com">Google search page</a><br>
+        <a href="http://twitter.com" target="_blank">Twitter login page</a>
+        <span>Span 1</span><br />
+        <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+        <!-- using target will open the new linked page in a new window-->
+        <span>Span 2</span>
+        <img src="https://fremont.edu/wp-content/uploads/2013/02/Effective-Study-Habits.jpg" alt="random" id="b-img">
+    </body>
+</html>

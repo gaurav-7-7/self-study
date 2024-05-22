@@ -1,0 +1,42 @@
+                        COMPONENTS
+
+Component structure
+- when we create a component using CLI we get bunch of pre written code inside the TS file of that component (each component when generated using cli has four files - html, ts, css, specs file)
+- Firstly we have the import statement with 'Component' decorator imported from angular core
+- Next we have the the @Component decorator that provides cofiguration metadata of how the component should be processed, instantiated, used on runtime.
+- Component decorator has few properties and values that defines how the component should be processed.
+    * 'selector': css selector that specifies the component's selector for styling 
+    * 'templateUrl': defines the HTML template that the component uses to display information(HTML file)
+    * 'styleUrls': selecting the style for the component's template
+- Next we have the class statement which includes constructor and the code for that component.
+
+Component Lifecycle Hooks
+- Every component has a lifecycle and angular instantiates the component class and renders the component view along with its child views.
+- The lifecycle continues with change detection and angular checks when these data-bound properties change, update.
+- The lifecycle ends when angular destorys the component instance and removes its rendered template from the DOM.(Directives have a similar lifycycle)
+- Lifecycle-hooks can be used to traget key events in the lifecycle of a component/directive.
+
+Responding to lifycycle events
+- To respond to an event we must implement one or more lifycycle hook interface fromt he angular core library.
+- each interface has definitive prototype for a single hook method(eg: ngOnInit())
+- when we implement method from an interface into our component, angular calls it calls it shortly after checking the input properties for that component or directive for the first time.
+
+Lifecycle event sequence
+- After component instantiation (constructor call), angular calls the hook methods you have implemented.
+- Angular executes hook mehtods in the following sequence:
+    1. ngOnChanges() - responds when angular sets or reset data-bound input properties, returns object - called whenever one or more data bound input properties change
+
+    2. ngOnInit() - used to initialize the component/directive - called once after the first ngOnChanges()
+
+    3. ngDoCheck() - used to detect and act upon chages that angular can't or won't detect on its own - called immediately after ngOnChanges() on every detection run and immediately after ngOnInit() on th first run
+    
+    4. ngAfterContentInit() - responds after angular projects external content into th component's view or into the view that the directive is in - called once after ngDoCheck()
+    
+    5. ngAfterContentChecked() - responds after angular checks the content projected into component/directive - called after ngAfterContentInit() and every subsequent ngDoCheck().
+    
+    6. ngAfterViewInit() - responds after angular initialize the component's views and child's views or the view that contains the directive - called once after the first ngAfterContentChecked()
+
+    7. ngAfterViewChecked() - respond after angular checks the component's view and child view or the view that contains the directive - called after the ngAfterViewInit() and every subsequent ngAfterContentChecked()
+
+    8. ngDestroy() - used to cleanup just before angular destroys the directive or component. Also used to unsubscribe observables and detach event handlers to avoid memory leaks - called immediately before angular destorys the component/directive
+

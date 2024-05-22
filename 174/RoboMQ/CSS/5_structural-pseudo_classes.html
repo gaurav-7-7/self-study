@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>stuctural-selectors</title>
+        <style>
+            /* structural pseudo classes apply style based on the childs of the parent class*/
+            h1:first-child{
+                /* applies style to the first child which is a heading*/
+                color: olive;
+            }
+            p :first-child{
+                /* applies style to the first child of the paragraph*/
+                color: olive;
+            }
+            body :nth-child(2){
+                /* applies style to the every second descendant of the element specified*/
+                color: orangered;
+            }
+            /* n-th of type selector*/
+            div a:nth-of-type(2){
+                /* selects the n-th element within the specified parent*/
+                color: peru;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">Heading</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio impedit doloremque laborum quia quam ducimus delectus recusandae, omnis officiis accusamus 
+            <a href="http://google.com">Google search page</a><a href="#">This is a link</a><br>
+            <a href="http://twitter.com" target="_blank">Twitter login page</a>
+            iste ipsum porro earum adipisci ipsam, atque, praesentium rerum exercitationem?
+        </p>
+        <p>
+            <span>This is a span</span>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam similique eligendi et nobis aspernatur neque dolore maxime ex voluptas, facere, ut iure eum animi velit! Expedita quam quas id tenetur!<span>This is a span</span>
+        </p>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <div class="div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur voluptates animi, vero rerum perspiciatis, 
+            <span>Span 1</span><br />
+            <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+            <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+            <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+            <span>Span 2</span>
+            omnis officiis quo sequi dolor autem quibusdam blanditiis iste itaque vel fuga sapiente quas nam!
+        </div>
+        <p>
+            <span>This is a span</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nam quisquam nihil. Nisi consectetur at asperiores deleniti rem officiis officia odio, enim pariatur et, distinctio accusantium, laborum ipsum aperiam corrupti?<span>This is a span</span>
+        </p>
+        <a href="http://google.com">Google search page</a><br>
+        <a href="http://twitter.com" target="_blank">Twitter login page</a>
+        <span>Span 1</span><br />
+        <a href="http://yahoo.com" target="_blank">Yahoo login page</a>
+        <span>Span 2</span>
+    </body>
+</html>

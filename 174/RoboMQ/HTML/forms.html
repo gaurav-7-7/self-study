@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
+        
+        <!--
+            - whenever we want to send some data from the front end to the back end, we make use of the form component.
+            - forms are very essential component for a website which happens to have a lot of user interaction.
+            - there are various kind of input elements that we can take from a form, be it name, password, date, etc.
+        -->
+        <h2>Input elements</h2>
+        <label>Name:</label> 
+        <input type="text" id="name"><br />
+        <label>Date:</label> 
+        <input type="date" id="date"><br />
+        <label>Password:</label> 
+        <input type="password" id="password"><hr />
+        <!--
+            - including labels help in increasing accesibility of the webpage and also help in styling the individual elements on webpage 
+        -->
+
+        <h2>Forms</h2>
+        <form action="message.html" method="post">
+            <label>Name:</label> 
+            <input type="text" id="name" name="name"><br />
+            <label>Date:</label> 
+            <input type="date" id="date" name="start-date"><br />
+            <label>Email:</label>
+            <input type="email" name="email" id="email">
+            <label>Password:</label> 
+            <input type="password" id="password" name="pass">
+            <button>Submit</button><br />
+            <!-- 
+                - If not specified a form by default sends data to itself on submit.
+                - form sends data to the backend using the query string which is the key-value pair of name attribute and the typed value
+                - to send data to another page we add the action attribute to the form tag which will have the relative path as value to which we want to navigate on submit.
+                - methods attribute take different values which are http verbs like get, post, etc which tell what kind of action to take on the data.
+                - when we want to 'get' data from the backend we use get and when we want to send data we use 'post'
+                - apart from query string parameters there is one more way to send data to the backend that is through the http request body which is a more secure way to send data as the data is hidden away. Passwords and credit card informations are sent through this way to keep the sensitive information secure.
+            -->
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" min="1" max="10">
+        </form><hr />
+    </body>
+</html>

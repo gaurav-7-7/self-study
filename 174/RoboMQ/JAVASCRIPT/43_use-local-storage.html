@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <span id="c"></span>
+        <script>
+            // this way we can access some stored value from one page to another
+            const val = localStorage.getItem('Fav-Color');
+            document.body.style.backgroundColor = val;
+
+            const city = localStorage.getItem('Fav-City')
+            document.getElementById('c').innerText = city;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+Asyncronous basic
+- Javascript being a syncronous non-blocking single threaded lang.
+- setTimeout is a way to make JS behave in an asyncronous way.
+- but still time, tide and js waits for none even setTimeout being present in JS still the next line is executed just the setTimeout resolves after the time specified.
+- setTimeout is a functionality provided by the node.js and not JS so everytime a asyncronous call is requested a new event is registered in Node.js api.
+- callback queue hold on to all the callback function calls to be executed in the call stack. This execution is done by the event loop that looks at the call stack and the callback queue. It executes the callback function in the callback queue inside the call stack whenever the call stack get empty.
+
+
+HTTP requests
+- http request enables us to communicate actually with the outside env. and get our requests fullfilled.
+
+Callback
+- callback is another way to preform asyncronous tasks we can next callback inside a callback but be cautious of callback hell which simply means we should only include adequete amount of callbacks(that we can handle). Our code might grow horizontally rather that growing vertically which is something that we want to avoid.
+
+Express (web-server dir)
+- using express we can build a middleware/server that handle specific request to give out the desired response.
+- ofcourse we can do all this manually but express has many build in functions that makes it easier to handle requests. Eg: express().get('', (function of what we wanna do when one visits a specific route)) that is used to implement routing to a specific page.
+- using listen function we can make our app to insitializa a http.server and provide base port and a callback function as argument.
+- using .get() function of express we can make our application to listen to differnt routes and their desired function resolve
+
+More about express
+- quickens the development process, creating mobile and web application, makes database integration process easier
+- apart from roution express has middleware function which has access to reqest-response objects along with the next function present in the application’s request-response cycle.
+- end the request-response cycle, call next middleware present cycle.
+- Express application have majorly the below listed middlewares:
+    * Application-level middleware
+    * Router-level middleware
+    * Error-handling middleware
+    * Built-in middleware
+    * Third-party middleware
+- using cookie-parser we can create cookie that holds small amount of information in th local system (majorly history/user data) to implicitly send locally stored data whenever the user reload the page of navigated to new one.
+
+REST APIs
+- Representational state transfer (REST) is an API that makes use of HTTP requests to perform various http requests (GET, PUT, POST, DELETE).
+- Express is built on connect module of nodeJs which makes it a suitable choice for server.
+
+Database connectivity
+- Connecting API's with the database in order to give retrieve/add/update/etc, information from data base on client request.
+
+Templating
+- with templating engine we can create and use static html template with minimal code. 
+- on execution the variables in the template file is replaced by actual values and the entire template is converted into an HTML file.
+- this then is sen back to the client's request.

@@ -1,0 +1,61 @@
+What is node.JS?
+- open source runtime env for running JS.
+- often used for building backend services like API (application program interface), which power our client application (Web APP, Mobile APP).
+- building highly scalable, data-intensive and real-time apps.
+- Node over other backend tools and framework because its great for prototyping and agile development, faster development and high scalability, cleaner source code as both the frontend and the back end is written in JS, it has large ecosystem and open source libs present. 
+- node is not a framework but a runtime env.
+
+Node JS architechture?
+- JS is run on browser so there must be a environment that runs JS. This env is Javascript runtime environment (JS Engine) that compile the JS code and executes it.
+- every browser has their own JS engine that run JS code. Example: Google's V8 engine
+- Node runtime env includes this JS engine along with some additional modules.
+- Node is neither a programming language nor a framework, its a runtime env. 
+
+How Node works?
+- Node works in a non-blocking asyncronous way.
+- a single thread handles all the requests.
+- node is used for I/O intensive application
+
+What are modules?
+- in real world we often distribute our JS code into multiple files and there might be a possibility that two differnt files might have same named global obj. The most recent declaration overrides the previous one's which undesirable. In order to make relialble and maintianable code we must avoid defining variales and functions at global scope.
+- Instead we must keep modularity and keep small building block modules where we define variables and functions within that module in order to overcome the overriding as discussed in the previous point.
+- every file in a node application is considered a module. Binding the variable and functions defined in that module to the scope of that file only. (just like in OOPS, when class are bound with private access modifier)
+- to access the fucntions and variables of any module we must export it in order to access the components of that file.
+
+
+Creating module
+- every individual file considered as a module and to access these modules inside anoter module we must define which properties are to exported and we can decide the name of the properties of the exported properties.
+- ideally we wanna export only the subset of the properties from a module to keep it simple to use and hide the implementation detail.
+
+Loading module
+- to access the exports we must add this "require('relative path of the module')" in order to access the exports form a specific file.
+- all the exports are passed on as an object.
+
+Module Wrapper functions
+- every module is run by the JS by enclosing in inside a module Wrapper IIFE.
+- this function takes some default parameters like require, exports, __dirname, __filename, etc.
+
+Path Module
+- one out of the many modules provided by node.js that comes with some build in function like parse() { which parses the parameter passed into a object with related properties }
+
+OS Module
+- another module with many functions which can be brushed up using the doc.
+
+File modules
+- many methods used to access or manipulate files.
+
+Event modules
+- event depicts something has happened. Example : When using HTTP modules we generate a event whose response must be resolved.
+- several classes of node raises different kind of events and we can handle them using differnt methods fromt the event class
+- using event argument we can pass data from raised event to our listener.
+
+Extending EvenEmitter
+- we dont want to work on event emitter obj directly but instead we want to make a event emitter class and extend that class to get the functionality of that class
+
+HTTP class modules
+- HTTP modules are used to create networking applications, Example: We can easily create backend service for out client  application built in React/Angular/etc.
+
+More about modules
+- whenever we install a dependencies it add it to the node modules directory which store all the modules and dependencies installed to our project.
+- package-lock.json stores all the information about dependencies and modules are installed.
+- while package.json store the information about our project in a brief we can see what dependencies are installed.

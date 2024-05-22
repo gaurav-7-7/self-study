@@ -1,0 +1,29 @@
+Forms
+- In angular we have a class called FormControl, and for each input feild we have to create and instance of this FormControl class
+- with this FormControl class we can check differnt aspect of the input field (whats the value, is it touched/untouched, is it dirty/valid, does it have any error, if so what is the error) so for each input field we need control object of the class
+- similar to the control class we have FormGroup class which represents a group of control in a form, each form is a control group because in each form we have at least one control
+- all the properties of the control class are also present for the FormGroup class. So we can check multiple input field at once and validate the entire form group if all the input field are valid. 
+- this way its easier to validate the entire form at once rather than checking each input field seperately
+- There are 2 ways to create this control object
+    * Using directives:  angular will create this control objects for us implicitly (called Template driven froms)
+    * Using code: Involves explicitly creating this control objects by creating new instances of the the control group and objects via code inside the component (forms built this way are called reactive forms)
+
+Reacitve VS Template-driven Forms
+- in reactive forms we have more control over the validation logic whereas in template-driven from we have simple validation and easier to create with less code
+- reactive forms are good for conmplex forms whereas later is good for creating simpler forms
+- reactive forms are unit-testable   
+
+Template driven forms
+- ngModel directive creates a control object associated to that input field.
+- when we apply the ngModel directive along with name attribute angular automatically creates an instance of FormControl class and associates with the input field
+
+Validation in Template driven forms
+- simple validation errors to trigger are:- required, minlength, maxlength, patter(regex validation)
+
+Reacitve froms
+- FormGroup is the class the we use to tie differnt form controls together into single unified form.
+- FormBuilder is a service that we use to build form easily
+
+Validation in Reactive forms
+- Angular comes with bunch of validators that will cover the most of our validation requirments
+- For this we can inport Validators from angular forms
