@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+const { promisify } = require('util')
 require('dotenv').config()
 
 const pool = mysql.createPool({
@@ -10,5 +11,7 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 0
 });
+
+pool.query = promisify(pool.query)
 
 module.exports = pool;

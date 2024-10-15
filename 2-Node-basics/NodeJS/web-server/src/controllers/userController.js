@@ -1,4 +1,4 @@
-const pool = require('./db');
+const pool = require('../utils/db');
 const {
     CREATE_USER,
     GET_ALL_USERS,
@@ -6,7 +6,7 @@ const {
     UPDATE_USER,
     PATCH_USER,
     DELETE_USER,
-} = require('./query-const')
+} = require('../utils/query-const')
 
 // Create User Function
 const createUser = (name, email, callback) => {
