@@ -102,5 +102,5 @@ class Queue {
 }
 
 (function mail() {
-    queues()
+    
 })();
